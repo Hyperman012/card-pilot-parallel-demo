@@ -1,6 +1,6 @@
 # CARD01: Line items foundation
 
-**Status:** READY
+**Status:** IN PROGRESS
 **Last Updated:** 2026-06-17
 **Spec:** [SPEC01](../SPEC01-line-items.md)
 **Commit:** `feat: add line_items foundation table and repository port`
