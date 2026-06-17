@@ -25,3 +25,4 @@ class LineItem(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     order_id: Mapped[int] = mapped_column(nullable=False)
+    unit_price: Mapped[float | None] = mapped_column(nullable=True, default=None)
