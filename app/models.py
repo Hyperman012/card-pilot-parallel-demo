@@ -16,6 +16,7 @@ class Order(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     status: Mapped[str] = mapped_column(nullable=False, default="pending")
     region: Mapped[str | None] = mapped_column(nullable=True, default=None)
+    note: Mapped[str | None] = mapped_column(nullable=True, default=None)
 
 
 class LineItem(Base):
