@@ -16,3 +16,12 @@ class Order(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     status: Mapped[str] = mapped_column(nullable=False, default="pending")
     region: Mapped[str | None] = mapped_column(nullable=True, default=None)
+
+
+class LineItem(Base):
+    """A line item. Foundation table — consumer cards add their own columns."""
+
+    __tablename__ = "line_items"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    order_id: Mapped[int] = mapped_column(nullable=False)
