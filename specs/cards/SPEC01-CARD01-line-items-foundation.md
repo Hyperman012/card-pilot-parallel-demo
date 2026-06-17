@@ -1,6 +1,6 @@
 # CARD01: Line items foundation
 
-**Status:** IN PROGRESS
+**Status:** UNDER REVIEW
 **Last Updated:** 2026-06-17
 **Spec:** [SPEC01](../SPEC01-line-items.md)
 **Commit:** `feat: add line_items foundation table and repository port`
@@ -29,10 +29,10 @@ AC4: A skipped acceptance test for the items API exists.
 
 ## Task Breakdown
 
-1. **Add LineItem model** — `app/models.py`: `LineItem` with `id` pk, `order_id` int not null. **Verify:** `uv run python -c "from app.models import LineItem"`
-2. **Generate migration** — `uv run alembic revision --autogenerate -m "create line_items"`. **Verify:** `rm -f app.db && uv run alembic upgrade head`
-3. **Add port** — `app/ports.py`: `LineItemRepository` runtime_checkable Protocol (`add`, `list`). **Verify:** import works.
-4. **Skipped acceptance test** — `tests/test_line_items_acceptance.py`: skipped test for POST then GET items. **Verify:** `uv run pytest` collects it as skipped.
+1. [x] **Add LineItem model** — `app/models.py`: `LineItem` with `id` pk, `order_id` int not null. **Verify:** `uv run python -c "from app.models import LineItem"`
+2. [x] **Generate migration** — `uv run alembic revision --autogenerate -m "create line_items"`. **Verify:** `rm -f app.db && uv run alembic upgrade head`
+3. [x] **Add port** — `app/ports.py`: `LineItemRepository` runtime_checkable Protocol (`add`, `list`). **Verify:** import works.
+4. [x] **Skipped acceptance test** — `tests/test_line_items_acceptance.py`: skipped test for POST then GET items. **Verify:** `uv run pytest` collects it as skipped.
 
 ## How to Verify
 
