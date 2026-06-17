@@ -3,4 +3,15 @@
 Starts empty. CARD01 (foundation) adds the bare table; consumer cards add the
 columns they need via additive migrations.
 """
-from app.db import Base  # noqa: F401  (re-exported so Alembic's env imports models)
+from sqlalchemy.orm import Mapped, mapped_column
+
+from app.db import Base
+
+
+class Order(Base):
+    """An order. Foundation table — consumer cards add their own columns."""
+
+    __tablename__ = "orders"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    status: Mapped[str] = mapped_column(nullable=False, default="pending")
